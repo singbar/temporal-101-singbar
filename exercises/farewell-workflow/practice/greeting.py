@@ -16,11 +16,9 @@ class GreetSomeone:
             start_to_close_timeout=timedelta(seconds=5),
         )
 
-        # TODO: uncomment the lines below and change it to execute the Activity function you created
-        # farewell = await workflow.execute_activity_method(
-        #    TranslateActivities.greet_in_spanish,
-        #    name,
-        #    start_to_close_timeout=timedelta(seconds=5),
-        # )
-
+        farewell = await workflow.execute_activity_method(
+            TranslateActivities.farewell_in_spanish,
+            name,
+            start_to_close_timeout=timedelta(seconds=5),
+        )
         return f"{greeting}\n{farewell}"
